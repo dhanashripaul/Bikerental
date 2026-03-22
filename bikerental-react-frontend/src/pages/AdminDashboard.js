@@ -98,20 +98,20 @@ const AdminDashboard = () => {
         <div className="card">
           <h3 className="text-xl font-bold mb-4">Quick Actions</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">View All Bookings</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">Manage Vehicles</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">Manage Brands</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">View Users</a></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">View All Bookings</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">Manage Vehicles</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">Manage Brands</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">View Users</button></li>
           </ul>
         </div>
 
         <div className="card">
           <h3 className="text-xl font-bold mb-4">Admin Features</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">Approve Testimonials</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">View Contact Queries</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">Generate Reports</a></li>
-            <li><a href="#" className="text-blue-600 hover:text-blue-800">System Settings</a></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">Approve Testimonials</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">View Contact Queries</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">Generate Reports</button></li>
+            <li><button type="button" className="text-blue-600 hover:text-blue-800 bg-none border-none p-0 cursor-pointer text-left">System Settings</button></li>
           </ul>
         </div>
       </div>
