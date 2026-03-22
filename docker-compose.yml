@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: bikerental-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bikerental
+      MYSQL_USER: bikerental_user
+      MYSQL_PASSWORD: bikerental_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./bikerental-java-backend/src/main/resources/db/migration:/docker-entrypoint-initdb.d
+    networks:
+      - bikerental-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "bikerental_user", "-pbikerental_password"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+
+  # Java Spring Boot Backend
+  backend:
+    build:
+      context: ./bikerental-java-backend
+      dockerfile: Dockerfile
+    container_name: bikerental-backend
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://db:3306/bikerental?useSSL=false&serverTimezone=UTC"
+      SPRING_DATASOURCE_USERNAME: bikerental_user
+      SPRING_DATASOURCE_PASSWORD: bikerental_password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
+      JWT_SECRET: "your-secret-key-change-in-production-min-32-characters"
+      JWT_EXPIRATION: 86400000
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bikerental-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./bikerental-react-frontend
+      dockerfile: Dockerfile
+    container_name: bikerental-frontend
+    restart: unless-stopped
+    environment:
+      REACT_APP_API_URL: http://localhost:8080/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - bikerental-network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  bikerental-network:
+    driver: bridge

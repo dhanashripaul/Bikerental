@@ -1,0 +1,82 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.code-workspace
+.DS_Store
+
+# Spring Boot
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Gradle
+.gradle/
+build/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Application specific
+src/main/resources/application-secret.properties
+uploads/
+logs/
+
+# Compile files
+*.class
+*.ctxt
+.mtj.tmp/
+*.jar
+*.jar.original
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.exe
+
+# Unit test reports
+target/
+surefire-reports/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.postgres
+
+# OS
+Thumbs.db
+.DS_Store
+*~
