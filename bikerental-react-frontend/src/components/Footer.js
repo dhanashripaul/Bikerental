@@ -47,11 +47,11 @@ const Footer = () => {
               <a href="#" className="hover:text-blue-400"><FiLinkedin size={20} /></a>
             </div>
             <p className="text-gray-400">
-              <a href="mailto:info@bikerental.com" className="hover:text-white">
-                info@bikerental.com
+              <a href="mailto:support@ridehub.com" className="hover:text-white">
+                support@ridehub.com
               </a>
             </p>
-            <p className="text-gray-400">+1 (555) 123-4567</p>
+            <p className="text-gray-400">+91 9999999999</p>
           </div>
         </div>
 

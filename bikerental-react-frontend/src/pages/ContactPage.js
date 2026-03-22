@@ -57,7 +57,7 @@ const ContactPage = () => {
                 <FiPhone className="text-blue-600 text-2xl flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-2">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+91 9999999999</p>
                   <p className="text-gray-600">Available 24/7</p>
                 </div>
               </div>
@@ -66,8 +66,8 @@ const ContactPage = () => {
                 <FiMail className="text-blue-600 text-2xl flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-2">Email</h3>
-                  <p className="text-gray-600">info@bikerental.com</p>
-                  <p className="text-gray-600">support@bikerental.com</p>
+                  <p className="text-gray-600">support@ridehub.com</p>
+                  <p className="text-gray-600">support@ridehub.com</p>
                 </div>
               </div>
 

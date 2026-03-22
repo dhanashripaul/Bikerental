@@ -1,4 +1,4 @@
-# BikeRental - Complete Project Summary
+# RideHub - Complete Project Summary
 
 ## ✅ Project Completion Status
 

@@ -1,4 +1,4 @@
-# BikeRental - Full Stack Application
+# RideHub - Full Stack Application
 
 > A modern, secure bike rental platform built with Java Spring Boot backend and React frontend
 

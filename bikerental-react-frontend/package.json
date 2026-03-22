@@ -1,7 +1,7 @@
 {
-  "name": "bikerental-frontend",
+  "name": "ridehub-frontend",
   "version": "1.0.0",
-  "description": "Bike Rental Application - React Frontend",
+  "description": "RideHub - Bike Rental Application - React Frontend",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

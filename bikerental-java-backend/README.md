@@ -1,4 +1,4 @@
-# Bike Rental API - Java/Spring Boot Backend
+# RideHub API - Java/Spring Boot Backend
 
 This is a RESTful API for the Bike Rental application built with Spring Boot, JPA, MySQL, and JWT authentication.
 

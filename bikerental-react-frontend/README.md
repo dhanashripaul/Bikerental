@@ -1,4 +1,4 @@
-# BikeRental Frontend - React Application
+# RideHub Frontend - React Application
 
 This is a modern React-based frontend for the Bike Rental application, built with React Router, Axios, and Tailwind CSS.
 

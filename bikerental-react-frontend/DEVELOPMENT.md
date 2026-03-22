@@ -1,4 +1,4 @@
-# BikeRental React Frontend - Development Guide
+# RideHub React Frontend - Development Guide
 
 ## Quick Start
 

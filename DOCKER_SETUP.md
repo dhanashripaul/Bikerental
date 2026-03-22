@@ -1,4 +1,4 @@
-# BikeRental Docker Deployment Guide
+# RideHub Docker Deployment Guide
 
 ## Prerequisites
 
@@ -7,7 +7,7 @@
 
 ## Quick Start with Docker Compose
 
-The easiest way to run the entire BikeRental application with all services:
+The easiest way to run the entire RideHub application with all services:
 
 ### 1. Start All Services
 
