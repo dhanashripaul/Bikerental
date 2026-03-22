@@ -60,7 +60,7 @@ html, body, #root {
 }
 
 .form-textarea {
-  @apply resize-vertical min-h-24;
+  @apply resize-y min-h-[6rem];
 }
 
 .error-message {
