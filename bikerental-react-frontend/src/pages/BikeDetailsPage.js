@@ -8,7 +8,7 @@ import { FiChevronLeft, FiDollarSign, FiUsers, FiCalendar } from 'react-icons/fi
 const BikeDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   const [bike, setBike] = useState(null);
   const [loading, setLoading] = useState(true);
   const [bookingData, setBookingData] = useState({
@@ -20,6 +20,7 @@ const BikeDetailsPage = () => {
 
   useEffect(() => {
     fetchBikeDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchBikeDetails = async () => {

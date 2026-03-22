@@ -74,9 +74,9 @@ const LoginPage = () => {
         </p>
 
         <p className="text-center text-gray-600">
-          <a href="#" className="text-blue-600 hover:text-blue-800 font-bold">
+          <button type="button" className="text-blue-600 hover:text-blue-800 font-bold bg-none border-none cursor-pointer p-0">
             Forgot password?
-          </a>
+          </button>
         </p>
       </div>
     </div>

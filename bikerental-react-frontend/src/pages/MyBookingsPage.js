@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { bookingService } from '../services/apiService';
 import { useAuth } from '../hooks/useAuth';
 import { toast } from 'react-toastify';
-import { FiTrash2, FiCheckCircle, FiClock } from 'react-icons/fi';
+import { FiTrash2, FiClock } from 'react-icons/fi';
 
 const MyBookingsPage = () => {
   const { user } = useAuth();
@@ -11,7 +11,10 @@ const MyBookingsPage = () => {
   const [deleting, setDeleting] = useState(null);
 
   useEffect(() => {
-    fetchMyBookings();
+    if (user?.email) {
+      fetchMyBookings();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const fetchMyBookings = async () => {
